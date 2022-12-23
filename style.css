@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Epilogue', sans-serif;
+  color: hsl(0, 0%, 41%);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 98%);
+  padding: 40px;
+}
+
+/* Navigation style */
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav{
+  display: flex;
+}
+
+.logo {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+
+nav ul{
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+nav ul li a {
+  text-decoration: none;
+}
+
+.arrowdown{
+  margin-left: 5px;
+}
+
+.login{
+display: flex;
+align-items: center;
+}
+
+.login p {
+  margin: 0 0 0 40px;
+}
+.Regbtn {
+  border-radius: 15px;
+  padding: 10px 20px 10px 20px;
+  border: solid hsl(0, 0%, 41%) 2px;
+  text-decoration: none;
+}
+
+nav ul li:hover, .login p:hover {
+  color: black;
+  cursor: pointer;
+}
+
+
+
+
+/* main content */
+
+main{
+  padding: 40px ;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+}
+
+.contentbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 465px;
+}
+
+.contentbox h1{
+  color: hsl(0, 0%, 8%);
+  font-size: 70px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.contentbox p{
+  /* Text line height */
+  line-height: 2;
+}
+
+.learnbtn{
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: hsl(0, 0%, 98%);
+  font-size: 18px;
+  font-weight: 500;
+
+  margin-top: 40px;
+  width: 150px;
+  padding: 10px;
+  border: solid black 2px;
+  border-radius: 15px;
+  background-color: black;
+}
+
+.learnbtn:hover {
+  cursor: pointer;
+  color: black;
+  background-color: white;
+}
+
+.sponsorlogo {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-bet;
+}
+
+.imgbox  img{
+  max-width: 400px;
+}
+
+.heromobile{
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+/* mobile view */
+
+@media screen and (max-width: 375px) {
+  *{
+    font-size: 16px;
+  }
+
+  .container{
+    width: 375px;
+    padding:0;
+  }
+
+  .logo{
+    /* margin-left: 20px ; */
+    padding: 20px;
+  }
+  nav ul, .login {
+    display: none;
+  }
+  
+  main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+  }
+  .contentbox{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contentbox h1 {
+    font-size: 32px;
+    margin: 20px 0;
+  }
+
+  .learnbtn{
+    margin: 20px auto 0;
+  }
+
+  .sponsorlogo{
+    width: 375px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .herodesktop{
+    display: none;
+  }
+
+  .heromobile{
+    width: 375px;
+    display: block;
+  }
+}
